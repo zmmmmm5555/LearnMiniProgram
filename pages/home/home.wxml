@@ -1,5 +1,13 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
 git checkout tag1
 11111111111111
