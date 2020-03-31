@@ -1,53 +1,48 @@
-// pages/wxml/wxml.js
+// pages/wxs.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    nowTime:new Date().toLocaleString(),
-    isActive:false,
-    isShow:true,
-    score:50,
-    movies:['西游记','水浒传','何以为家'],
-    letters:['a','s','q'],
-    nums:[
-      [12,21,34,24],
-      [1,221,334,224],
-      [112,221,344,244],
-    ]
+    price:"25.515",
+    time:1560598160
   },
-  handleSwitchColor(){
-    this.setData({
-      isActive:!this.data.isActive
-    })
+  handleItemClick(event){
+     console.log(event);
+     const dataset = event.currentTarget.dataset;
+     const title = dataset.item;
+     const index = dataset.index;
+     console.log(title,index);
+     
+     
   },
-  hanleSwitchShow(){
-    this.setData({
-      isShow:!this.data.isShow
-    })
+  //------事件冒泡和事件捕获
+  handleCaptureView1(){
+    console.log('handleCaptureView1');
+    
   },
-  handleIncrement(){
-    this.setData({
-      score:this.data.score + 6
-    })
+  handleBindView1(){
+    console.log('handleBindView1');
   },
-  numberToFixed(value){
-     return value.toFixed(2)
+  handleCaptureView2(){
+    console.log('handleCaptureView2');
+  },
+  handleBindView2(){
+    console.log('handleBindView2');
+  },
+  handleCaptureView3(){
+    console.log('handleCaptureView3');
+  },
+  handleBindView3(){
+    console.log('handleBindView3');
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(){
-    setInterval(()=>{
-       this.setData({
-         nowTime:new Date().toLocaleString()
-       })
-    },1000)
-  },
-  handleSwitchColor(){
-    console.log('-----')
+  onLoad: function (options) {
+
   },
 
   /**

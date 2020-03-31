@@ -1,9 +1,13 @@
 {
   "pages": [
+    "pages/wxs/wxs",
     "pages/wxml/wxml",
     "pages/home/home",
     "pages/about/about",
     "pages/index/index"
   ],
+  "usingComponents":{
+    "cpn1":"/components/cpn1/cpn1"
+  },
   "sitemapLocation": "sitemap43.json"
 }

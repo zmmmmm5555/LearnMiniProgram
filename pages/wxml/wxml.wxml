@@ -97,4 +97,7 @@
 <template is="contentItem" data="{{btnText:'点击',content:'喝喝喝'}}"/>
 
 
+<!--错误写法 <view>{{numberToFixed(25.645454)}}</view> -->
+
+
 

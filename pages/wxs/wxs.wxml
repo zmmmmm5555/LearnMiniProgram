@@ -1,0 +1,65 @@
+<!--pages/wxs.wxml-->
+<!-- <text>pages/wxs.wxml</text> -->
+
+<!--wxs的定义方式-->
+<!-- <wxs module="info">
+    //JS代码
+    var message = "Hello World";
+    var name = "kjsjklj";
+
+    var sum = function(num1,num2){
+      return num1+num2
+    }
+
+    //commonjs 的模块化导出的写法
+    module.exports = {
+        message:message,
+        name:name,
+        sum: sum
+    }
+</wxs> -->
+
+<!--2.2定义在单独的wxs文件中，再使用<wxs>标签进行导入-->
+<!--不能使用绝对路径，必须使用相对路径-->
+<!-- <wxs src="/wxs/info.wxs" module="info"/> -->
+
+
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(20,36)}}</view>
+
+<!--3.wxs的应用-->
+<wxs src="../../wxs/format.wxs" module="format"/>
+
+<view>{{format.priceFormat(price)}}</view>
+
+<view>{{format.dateFormat(time,'yyyy-MM-dd hh:mm:ss')}}</view>
+
+
+<!--事件的传递参数-->
+<view class="container">
+    <block wx:for="{{titles}}" wx:key="{{index}}">
+     <view class="item"
+            bindtap="handleItemClick"
+            data-index="{{index}}"
+            data-item="{{item}}">
+     
+     </view>
+    </block>
+</view>
+
+<!--事件冒泡和事件 - eatch和bind区别-->
+<!--bind:一层层传递-->
+<!--catch:组织事件的进一步传递-->
+<!-- <view class="view1" capture-catch:tap="handleCaptureView1" bindtap="handleBindView1">
+   <view class="view2" capture-bind:tap="handleCaptureView2" catchtap="handleBindView12">
+      <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView13"></view>
+   </view>
+</view> -->
+
+<!--使用自定义组件-->
+<my-cpn></my-cpn>
+<my-cpn/>
+
+<!--自定义组件的样式细节-->
+<my-style/>
